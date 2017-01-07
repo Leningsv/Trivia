@@ -7,6 +7,5 @@ app.controller('LoginCtrl',
         };
         $scope.Login = function () {
             console.log('Login - Implementar Funcion Login');
-
         }
 }]);
