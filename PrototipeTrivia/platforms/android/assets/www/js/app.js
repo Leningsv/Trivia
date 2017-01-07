@@ -33,7 +33,8 @@ angular.module('Trivia', ['ionic', 'starter.controllers'])
           url: '/login',
           views: {
               'menuContent': {
-                  templateUrl: 'templates/login.html'
+                  templateUrl: 'templates/login.html',
+                  controller: 'LoginCtrl'
               }
           }
       }).state('app.search', {
