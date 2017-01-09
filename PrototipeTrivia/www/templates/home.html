@@ -1,0 +1,35 @@
+﻿<style>
+    .Absolute-Center {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+        .Absolute-Center.is-Responsive {
+            width: 90%;
+            height: 60%;
+        }
+</style>
+<ion-view view-title="Home">
+    <ion-content>        
+        <div class="panel panel-primary Absolute-Center is-Responsive">
+            <div class="panel-heading">
+                <h3 class="panel-title">Descripcion del Participante</h3>
+            </div>
+            <div class="panel-body">
+                <div class="container">
+                    <div class="list text-center">
+                        <label class="item item-input">
+                            <!--style="border-radius: 15px"-->
+                            <span class="input-label">Usuario:</span>
+                            <input name="txtUsername" type="text" ng-model="loginData.username" placeholder="Usuario" required>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </ion-content>
+</ion-view>

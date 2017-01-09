@@ -37,6 +37,30 @@ angular.module('Trivia', ['ionic', 'starter.controllers'])
                   controller: 'LoginCtrl'
               }
           }
+      }).state('app.home', {
+          url: '/home',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/home.html',
+                  controller: 'HomeCtrl'
+              }
+          }
+      }).state('app.event', {
+          url: '/event',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/event.html',
+                  controller: 'EventCtrl'
+              }
+          }
+      }).state('app.query', {
+          url: '/query',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/query.html',
+                  controller: 'QueryCtrl'
+              }
+          }
       }).state('app.search', {
           url: '/search',
           views: {
