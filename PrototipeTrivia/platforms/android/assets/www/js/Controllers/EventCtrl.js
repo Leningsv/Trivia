@@ -31,11 +31,16 @@ app.controller('EventCtrl',
                 $scope.event = {
                     name: $scope.events[i].name
                 }
-                i++;                     //  increment the counter
+                $scope.$apply();
+                i++;
+                if (i === $scope.events.length) {
+                    i = 0;
+                }
+                //  increment the counter
                 if (i < $scope.events.length) {            //  if the counter < 10, call the loop function
                     $scope.myLoop();             //  ..  again which will trigger another
                 }                        //  ..  setTimeout()
-            }, 300)
+            }, 500)
         }
         $scope.myLoop()
     }]);
