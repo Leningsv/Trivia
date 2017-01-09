@@ -2,12 +2,28 @@
 app.controller('QueryCtrl',
     ['$scope',
     function ($scope) {
-        $scope.Answer = function (flag) {
-            if (flag === true) {
-                console.log('list card animated infinite tada');
-                return 'list card animated infinite tada';
-            }
-            return 'list card animated bounceInLeft';
+        $scope.queries = [{
+            description: 'respuesta 1',
+            style: 'bounceInLeft'
+        }, {
+            description: 'respuesta 2',
+            style: 'bounceInRight'
+        }, {
+            description: 'respuesta 3',
+            style: 'bounceInLeft'
+        }, {
+            description: 'respuesta 4',
+            style: 'bounceInRight'
+        }]
+        $scope.Answer = function (query) {
+            $scope.queries.forEach(function (item) {
+                if (item === query) {
+                    item.style = 'infinite tada';
+                } else {
+                    item.style = '';
+                }
+            }, this);
+                
         }
                 
 }]);

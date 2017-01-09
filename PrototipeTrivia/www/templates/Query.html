@@ -3,31 +3,31 @@
         <div class="list card animated tada">
             <div class="item item-divider">Pregunta 1</div>  
         </div>                          
-        <div class="{{Answer()}}" ng-click="Answer(true)">
+        <div class="list card animated {{queries[0].style}}" ng-click="Answer(queries[0])">
             <div class="item item-body">
                 <div>
-                    Respuesta 1
+                    {{queries[0].description}}                    
                 </div>
             </div>          
         </div>
-        <div class="{{Answer()}}" ng-click="Answer(true)">
+        <div class="list card animated {{queries[1].style}}" ng-click="Answer(queries[1])">
             <div class="item item-body">
                 <div>
-                    Respuesta 2
+                    {{queries[1].description}}
                 </div>
             </div>
         </div>
-        <div class="{{Answer()}}" ng-click="Answer(true)">
+        <div class="list card animated {{queries[2].style}}" ng-click="Answer(queries[2])">
             <div class="item item-body">
                 <div>
-                    Respuesta 3
+                    {{queries[2].description}}
                 </div>
             </div>
         </div>
-        <div class="{{Answer()}}" ng-click="Answer(true)"> <!--infinite tada-->
+        <div class="list card animated {{queries[3].style}}" ng-click="Answer(queries[3])"> <!--infinite tada-->
             <div class="item item-body">
                 <div>
-                    Respuesta 4
+                    {{queries[3].description}}
                 </div>
             </div>
         </div> 
