@@ -10,7 +10,7 @@ angular.module('Trivia', ['ionic', 'starter.controllers'])
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
-        if (cordova.platformId === "ios" && window.cordova && window.cordova.plugins.Keyboard) {
+        if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             cordova.plugins.Keyboard.disableScroll(true);
 
@@ -53,6 +53,14 @@ angular.module('Trivia', ['ionic', 'starter.controllers'])
                   controller: 'EventCtrl'
               }
           }
+      }).state('app.ruleta', {
+          url: '/ruleta',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/ruleta.html',
+                  controller: 'ruletaCtrl'
+              }
+          }
       }).state('app.query', {
           url: '/query',
           views: {
@@ -91,7 +99,12 @@ angular.module('Trivia', ['ionic', 'starter.controllers'])
                 controller: 'PlaylistCtrl'
             }
         }
-    });
+    }).state('seleccion', {
+      url: '/seleccion',
+      abstract: false,
+      templateUrl: 'templates/image-popover.html',
+      controller: 'ruletaCtrl'
+  });
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/login');
 });

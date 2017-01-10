@@ -1,0 +1,28 @@
+<ion-view view-title="Ruleta" ><!---->
+<ion-content >
+  <div class="fondo-ruleta">
+    <div class="fondo-izquierdo"></div>
+    <div class="fondo-interno-ruleta">
+      <ion-slides options="sliderOptions" slider="data.slider">
+        <ion-slide-page ng-repeat="items in listaItems" >
+          <img class="item-first" src="{{items.urlImagen}}"></img>
+         </ion-slide-page>
+      </ion-slides>
+    </div>
+    <div class="fondo-derecha"></div>
+  </div>
+  <div class="circulo">
+    <button style="border-color: transparent;
+      background: none;
+      box-shadow: none;
+      font-size: 9px;
+      font-weight: bold;
+      color: black;" ng-click="empezar()">
+  Empezar
+</button>
+  </div>
+  <div>
+    <img src="../img/profesor.gif"></img>
+  </div>
+</ion-content>
+</ion-view>
